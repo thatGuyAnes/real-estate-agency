@@ -37,4 +37,4 @@ const mapStateToProps = (state) => {
   return { menuState: state.menuState };
 };
 
-export default connect(mapStateToProps, { toggleMenu: toggleMenu })(NavBar);
+export default connect(mapStateToProps, { toggleMenu: toggleMenu })(Navbar);
