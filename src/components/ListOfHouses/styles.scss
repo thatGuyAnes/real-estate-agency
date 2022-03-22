@@ -4,8 +4,8 @@
   position: relative;
   // change to grid
   display: grid;
-  column-gap: 50px;
-  grid-template-columns: 45% 45%;
+  // column-gap: 50px;
+  grid-template-columns: 638px 638px;
   margin-top: 50px;
-  border: 1px solid red;
+  justify-content: space-between;
 }

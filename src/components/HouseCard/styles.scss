@@ -1,10 +1,14 @@
+@import '../../styles/size_mixins.scss';
+.c-card-container {
+  width: 100%;
+}
 .c-card {
   // width: 638px;
   // height: 424px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  border: 2px solid blue;
+  // max-width: 638px;
 }
 
 .c-card__image-wrapper {
@@ -19,6 +23,7 @@
 }
 .c-card__buttons {
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .c-card__text {
   &__price {
