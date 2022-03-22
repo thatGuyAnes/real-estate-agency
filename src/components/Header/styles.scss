@@ -1,0 +1,33 @@
+.c-header {
+}
+.c-header__text-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 5em 0;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+.c-header__title {
+  width: 50%;
+  font-weight: 700;
+  font-size: 40px;
+}
+.c-header__text {
+  width: 40%;
+  font-weight: 400;
+}
+.c-header__cta {
+  height: 66px;
+  width: 310px;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  &__arrow {
+    background: url('../../../public/assets/arrow.png') no-repeat top left;
+  }
+}

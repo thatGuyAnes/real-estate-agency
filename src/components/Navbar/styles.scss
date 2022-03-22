@@ -1,0 +1,35 @@
+@import '../../styles/size_mixins.scss';
+
+.c-navbar {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  width: 100%;
+  @include xl {
+  }
+  @include md {
+  }
+  @include sm {
+  }
+}
+
+.c-nav__logo {
+  height: 33px;
+  width: 121px;
+  background-image: url('../../../public/assets/Logo.png');
+  background-position: center;
+}
+.c-navbar__list {
+  display: flex;
+  list-style-type: none;
+}
+.c-navbar__item {
+  margin-left: 3em;
+  &.__lang {
+    margin-left: 5em;
+    text-decoration: underline;
+  }
+}
