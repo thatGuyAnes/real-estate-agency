@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './styles.scss';
-import toggleMenu from '../../actions/openMenu';
+import { toggleMenu } from '../../actions';
 
 const Navbar = ({ menuState, toggleMenu }) => {
   return (
