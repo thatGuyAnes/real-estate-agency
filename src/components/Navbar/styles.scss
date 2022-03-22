@@ -12,8 +12,6 @@
   }
   @include md {
   }
-  @include sm {
-  }
 }
 
 .c-nav__logo {
@@ -44,8 +42,14 @@
   }
 }
 .c-nav__hamburger {
+  display: none;
+  // display on mobile
+  @include sm {
+    display: block;
+  }
 }
 .c-nav__menu {
+  display: none;
 }
 .c-menu__langs {
 }

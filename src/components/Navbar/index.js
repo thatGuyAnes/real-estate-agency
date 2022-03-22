@@ -17,7 +17,8 @@ const Navbar = ({ menuState, toggleMenu }) => {
         <li className="c-navbar__item __lang">En</li>
       </ul>
 
-      <span className="c-nav__hamburger"></span>
+      {/* click events will call the action creator */}
+      <span className="c-nav__hamburger" onClick={toggleMenu}></span>
 
       {/* make this its own component */}
       <span className="c-nav__menu">
@@ -25,7 +26,7 @@ const Navbar = ({ menuState, toggleMenu }) => {
         <li className="c-menu__item">Projects</li>
         <li className="c-menu__item">Career</li>
         <li className="c-menu__item">Contacts</li>
-
+        {/* probably a the language as a global state */}
         <span className="c-menu__langs"></span>
       </span>
     </div>
