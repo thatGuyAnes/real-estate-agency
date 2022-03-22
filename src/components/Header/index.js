@@ -21,10 +21,7 @@ const Header = () => {
       <button className="c-header__cta">
         View all properties
         <span className="c-header__cta__arrow">
-
             <svg
-              width="54"
-              height="16"
               viewBox="0 0 54 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

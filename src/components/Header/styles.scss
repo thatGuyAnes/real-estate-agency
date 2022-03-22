@@ -1,11 +1,14 @@
 @import '../../styles/size_mixins.scss';
 
 .c-header {
+  width: 100%;
+  margin-top: 102px;
   @include md {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 86px;
   }
 }
 
@@ -14,11 +17,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 102px;
   position: relative;
   font-family: 'Poppins', sans-serif;
   @include md {
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-bottom: 36px;
   }
@@ -33,46 +36,63 @@
   margin: 0;
   padding: 0;
   margin-right: 64px;
-  color: #0a0a0a;
+  color: var(--color-bold);
   @include md {
     text-align: center;
     width: 100%;
     max-width: 429px;
     font-size: 30px;
+    line-height: 45px;
+    margin: 0;
   }
 }
 
 .c-header__text {
   width: 100%;
   max-width: 540px;
-  font-weight: 400;
-  line-height: 27px;
   padding: 0;
   margin: 0;
-  color: #000;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--color-regular);
   @include md {
-    text-align: center;
+    margin-top: 36px;
     width: 100%;
     max-width: 539px;
     font-size: 16px;
+    line-height: 24px;
+    text-align: center;
   }
 }
 
 .c-header__cta {
   height: 66px;
   width: 310px;
-  background-color: transparent;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 76px;
   border: 1.5px solid #0a0a0a;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #0a0a0a;
+  color: var(--color-bold);
+  background-color: transparent;
+  @include md {
+    margin-top: 36px;
+    width: 261px;
+    font-size: 20px;
+    line-height: 30px;
+  }
   &__arrow {
+    svg {
+      height: auto;
+      width: 51px;
+      @include md {
+        width: 41px;
+      }
+    }
   }
 }
