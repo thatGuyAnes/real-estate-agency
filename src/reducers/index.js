@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
-export const stateOfMenu = (menuState=false, action) => {
+export const stateOfMenu = (isOpen=false, action) => {
   if (action.type === "TOGGLE_MENU") {
     return action.payload;
   }
-  return menuState;
+  return isOpen;
 };
 
 export default combineReducers({
-  menuState: stateOfMenu
+  isOpen: stateOfMenu
 });

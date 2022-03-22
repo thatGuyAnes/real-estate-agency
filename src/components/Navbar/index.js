@@ -5,6 +5,12 @@ import './styles.scss';
 import { toggleMenu } from '../../actions';
 
 const Navbar = ({ menuState, toggleMenu }) => {
+
+  const handleClick = (_e) => {
+    menuState(true)
+    console.log('ham clicked')
+  }
+
   return (
     <div className="c-navbar">
 
@@ -20,12 +26,19 @@ const Navbar = ({ menuState, toggleMenu }) => {
       <span className="c-navbar__lang">En</span>
 
       {/* click events will call the action creator */}
-      <div className="c-nav__hamburger" onClick={toggleMenu}>
+      <div
+        className="c-nav__hamburger"
+        onClick={handleClick}
+      >
+
         <span className="c-nav__hamburger__line"></span>
       </div>
 
       {/* make this its own component */}
-      <span className="c-nav__menu">
+      {/* toggle class of open/closed  */}
+      <span
+        className={ menuState ? `c-nav__menu` : `c-nav__menu --open` }
+      >
         <li className="c-menu__item">About Us</li>
         <li className="c-menu__item">Projects</li>
         <li className="c-menu__item">Career</li>
