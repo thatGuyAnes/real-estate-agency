@@ -1,0 +1,34 @@
+{
+  "houses": [
+    {
+      "image": "001",
+      "price": "$4.354.365",
+      "desc": "7187 Morapa Dr."
+    },
+    {
+      "image": "002",
+      "price": "$4.354.365",
+      "desc": "1301 Dolphin Terrace"
+    },
+    {
+      "image": "003",
+      "price": "$4.354.365",
+      "desc": "215 Milford Dr."
+    },
+    {
+      "image": "004",
+      "price": "$4.354.365",
+      "desc": "14953 Sutton St°"
+    },
+    {
+      "image": "005",
+      "price": "$4.354.365",
+      "desc": "215 Milford Dr."
+    },
+    {
+      "image": "006",
+      "price": "$4.354.365",
+      "desc": "9315 Nightingale Dr."
+    }
+  ]
+}
