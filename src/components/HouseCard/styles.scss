@@ -1,0 +1,25 @@
+.c-card {
+  // width: 638px;
+  // height: 424px;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card__image-wrapper {
+}
+.c-card__buttons,
+.c-card__text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+.c-card__buttons {
+  font-weight: 500;
+}
+.c-card__text {
+  &__price {
+    font-weight: 700;
+  }
+}

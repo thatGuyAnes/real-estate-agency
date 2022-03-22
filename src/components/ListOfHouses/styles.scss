@@ -1,0 +1,10 @@
+.c-cards-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // change to grid
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
