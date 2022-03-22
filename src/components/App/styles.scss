@@ -6,4 +6,7 @@
   @include md {
     padding: 36px 36px;
   }
+  @include sm {
+    padding: 20px 20px;
+  }
 }

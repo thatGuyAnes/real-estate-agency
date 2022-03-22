@@ -16,10 +16,13 @@ const Navbar = ({ menuState, toggleMenu }) => {
         <li className="c-navbar__item">Career</li>
         <li className="c-navbar__item">Contacts</li>
       </ul>
+
       <span className="c-navbar__lang">En</span>
 
       {/* click events will call the action creator */}
-      <span className="c-nav__hamburger" onClick={toggleMenu}></span>
+      <div className="c-nav__hamburger" onClick={toggleMenu}>
+        <span className="c-nav__hamburger__line"></span>
+      </div>
 
       {/* make this its own component */}
       <span className="c-nav__menu">
