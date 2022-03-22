@@ -3,8 +3,9 @@
   height: 100%;
   position: relative;
   // change to grid
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 45% 45%;
   margin-top: 50px;
+  border: 1px solid red;
 }
