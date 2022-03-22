@@ -7,6 +7,7 @@ import { toggleMenu } from '../../actions';
 const Navbar = ({ menuState, toggleMenu }) => {
   return (
     <div className="c-navbar">
+
       <span className="c-nav__logo"></span>
 
       <ul className="c-navbar__list">
@@ -14,8 +15,8 @@ const Navbar = ({ menuState, toggleMenu }) => {
         <li className="c-navbar__item">Projects</li>
         <li className="c-navbar__item">Career</li>
         <li className="c-navbar__item">Contacts</li>
-        <li className="c-navbar__item __lang">En</li>
       </ul>
+      <span className="c-navbar__lang">En</span>
 
       {/* click events will call the action creator */}
       <span className="c-nav__hamburger" onClick={toggleMenu}></span>

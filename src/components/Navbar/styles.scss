@@ -5,44 +5,72 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   height: 38px;
   width: 100%;
-  @include xl {
-  }
+  position: relative;
+  gap: 134px;
   @include md {
+    gap: 74px;
   }
 }
 
 .c-nav__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 33px;
   width: 121px;
   background-image: url('../../../public/assets/Logo.png');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
+  @include md {
+    width: 121px;
+  }
 }
 .c-navbar__list {
   display: flex;
   list-style-type: none;
-}
-.c-navbar__item {
-  margin-left: 3em;
-  cursor: pointer;
-  &.__lang {
-    position: relative;
-    // margin-left: 5em;
-    // text-decoration: underline;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: #000;
-    }
+  // margin-left: 560px;
+  // margin-right: 134px;
+  gap: 60px;
+  @include md {
+    margin: 0;
+    gap: 40px;
   }
 }
+.c-navbar__item {
+  // margin-left: 60px;
+  cursor: pointer;
+  font-size: 20px;
+  white-space: nowrap;
+  @include md {
+    font-size: 18px;
+  }
+}
+
+.c-navbar__lang {
+  position: relative;
+  justify-self: flex-end;
+  font-size: 20px;
+  // margin-left: 5em;
+  // text-decoration: underline;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+  }
+  @include md {
+    font-size: 18px;
+  }
+}
+
 .c-nav__hamburger {
   display: none;
   // display on mobile

@@ -1,3 +1,9 @@
+@import '../../styles/size_mixins.scss';
+
 .c-app {
-  padding: 30px 50px;
+  overflow: hidden;
+  padding: 52px 53px;
+  @include md {
+    padding: 36px 36px;
+  }
 }
