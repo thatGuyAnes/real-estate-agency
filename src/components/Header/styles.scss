@@ -4,7 +4,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 5em 0;
   position: relative;
   font-family: 'Poppins', sans-serif;
@@ -17,9 +16,9 @@
 .c-header__text {
   width: 40%;
   font-weight: 400;
-  max-width: 539px;
 }
 .c-header__cta {
+  cursor: pointer;
   height: 66px;
   width: 310px;
   background-color: transparent;
@@ -30,6 +29,6 @@
   font-weight: 600;
   font-size: 24px;
   &__arrow {
-    margin-left: 10px;
+    background: url('../../../public/assets/arrow.png') no-repeat top left;
   }
 }

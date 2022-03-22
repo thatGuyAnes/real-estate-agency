@@ -19,6 +19,7 @@
   width: 121px;
   background-image: url('../../../public/assets/Logo.png');
   background-position: center;
+  cursor: pointer;
 }
 .c-navbar__list {
   display: flex;
@@ -26,6 +27,7 @@
 }
 .c-navbar__item {
   margin-left: 3em;
+  cursor: pointer;
   &.__lang {
     position: relative;
     // margin-left: 5em;
