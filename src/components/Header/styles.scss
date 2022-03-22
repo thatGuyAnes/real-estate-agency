@@ -1,5 +1,14 @@
+@import '../../styles/size_mixins.scss';
+
 .c-header {
+  @include md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
 .c-header__text-wrapper {
   width: 100%;
   display: flex;
@@ -8,17 +17,37 @@
   margin: 5em 0;
   position: relative;
   font-family: 'Poppins', sans-serif;
+  @include md {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
 }
+
 .c-header__title {
   width: 60%;
   max-width: 730px;
   font-weight: 700;
   font-size: 40px;
+  @include md {
+    text-align: center;
+    width: 100%;
+    max-width: 429px;
+    font-size: 30px;
+  }
 }
+
 .c-header__text {
   width: 40%;
   font-weight: 400;
+  @include md {
+    text-align: center;
+    width: 100%;
+    max-width: 539px;
+    font-size: 16px;
+  }
 }
+
 .c-header__cta {
   height: 66px;
   width: 310px;
