@@ -7,9 +7,10 @@ const HouseCard = ({ house }) => {
     <div className="c-card-container">
       <div className="c-card">
         {/* I want to set the sizes dynamically with srcset ( I forgot the syntax ) */}
-        <span className="c-card__image-wrapper">
+        <span className="c-card__image-container">
           {/* TOFIX: use picture elm */}
           {/* <img src={`./assets/${house.image}.png`} alt="a house" /> */}
+      <span className="c-card__image-overlay"></span>
           <picture>
             <source
               srcset={`./assets/${house.image}.png`}
@@ -25,11 +26,14 @@ const HouseCard = ({ house }) => {
             />
           </picture>
         </span>
+        {/* TODO: button and text better be wrapped inside a container
+         for better positioning */}
         <div className="c-card__buttons">
+          {/* TOFIX: heart svg path needs a rework */}
           <span className="c-card__buttons__heart">
             <svg
-              width="27"
-              height="24"
+              // width="27"
+              // height="24"
               viewBox="0 0 27 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +48,8 @@ const HouseCard = ({ house }) => {
           </span>
           <span className="c-card__buttons__arrow">
             <svg
-              width="54"
-              height="16"
+              // width="54"
+              // height="16"
               viewBox="0 0 54 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

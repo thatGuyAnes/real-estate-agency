@@ -8,10 +8,14 @@
   display: grid;
   // column-gap: 50px;
   grid-template-columns: 638px 638px;
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: space-between;
-
   @include md {
     grid-template-columns: auto;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  @include sm {
+    margin-top: 54px;
   }
 }

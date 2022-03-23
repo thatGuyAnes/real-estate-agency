@@ -1,18 +1,42 @@
 @import '../../styles/size_mixins.scss';
+
 .c-card-container {
   width: 100%;
-}
-.c-card {
-  // width: 638px;
-  // height: 424px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  // max-width: 638px;
+  margin-bottom: 51px;
+  @include md {
+    height: 460px;
+    margin-bottom: 50px;
+  }
+  @include sm {
+    height: 170px;
+    margin-bottom: 30px;
+  }
 }
 
-.c-card__image-wrapper {
+.c-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include sm {
+    position: relative;
+  }
 }
+
+.c-card__image-container {
+}
+.c-card__image-overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+}
+
 .c-card__buttons,
 .c-card__text {
   width: 100%;
@@ -20,13 +44,72 @@
   align-items: center;
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
+  @include sm {
+    position: absolute;
+    left: 0;
+  }
 }
+
 .c-card__buttons {
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-top: 14px;
+  @include md {
+    margin-top: 30px;
+  }
+  @include sm {
+    margin: 0;
+    top: 5px;
+  }
 }
+
 .c-card__text {
+  margin-top: 18px;
+  font-weight: 500;
   &__price {
     font-weight: 700;
+  }
+  @include md {
+    margin-top: 18px;
+  }
+  @include sm {
+    bottom: 5px;
+    color: #fff;
+    &__desc {
+      font-size: 12px;
+      justify-self: right;
+      margin-left: auto;
+      margin-right: 7px;
+    }
+    &__price {
+      font-size: 14px;
+      justify-self: left;
+      margin-right: auto;
+      margin-left: 7px;
+    }
+  }
+}
+
+.c-card__buttons__heart {
+  width: 27px;
+  @include sm {
+    width: 18px;
+    justify-self: left;
+    margin-right: auto;
+    margin-left: 7px;
+    svg path {
+      stroke: #fff;
+    }
+  }
+}
+.c-card__buttons__arrow {
+  width: 57px;
+  @include sm {
+    width: 34px;
+    justify-self: right;
+    margin-left: auto;
+    margin-right: 7px;
+    svg path {
+      fill: #fff;
+    }
   }
 }
