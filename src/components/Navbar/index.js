@@ -1,25 +1,23 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 
 import './styles.scss';
 import { toggleMenu } from '../../actions';
 
 const Navbar = ({ isOpen, toggleMenu }) => {
-
   const hamburgerRef = useRef();
 
   const openMenu = (_e) => {
-    toggleMenu(true)
+    toggleMenu(true);
   };
 
   const closeMenu = (_e) => {
-    toggleMenu(false)
+    toggleMenu(false);
   };
 
-    console.log(isOpen)
+  console.log(isOpen);
   return (
     <div className="c-navbar">
-
       <span className="c-nav__logo"></span>
 
       <ul className="c-navbar__list">
@@ -42,16 +40,16 @@ const Navbar = ({ isOpen, toggleMenu }) => {
 
       {/* make this its own component */}
       {/* toggle class of open/closed  */}
-      <span
-        className={ isOpen ? `c-nav__menu --open` : `c-nav__menu` }
-      >
-        <li className="c-menu__item">About Us</li>
-        <li className="c-menu__item">Projects</li>
-        <li className="c-menu__item">Career</li>
-        <li className="c-menu__item">Contacts</li>
-        {/* probably a the language as a global state */}
-        <span className="c-menu__langs"></span>
-      </span>
+      <div className={isOpen ? `c-nav__menu --open` : `c-nav__menu`}>
+          <ul className="c-menu__list">
+            <li className="c-menu__item">About Us</li>
+            <li className="c-menu__item">Projects</li>
+            <li className="c-menu__item">Career</li>
+            <li className="c-menu__item">Contacts</li>
+          </ul>
+          {/* probably a the language as a global state */}
+          <span className="c-menu__langs"></span>
+      </div>
     </div>
   );
 };
