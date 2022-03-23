@@ -8,7 +8,22 @@ const HouseCard = ({ house }) => {
       <div className="c-card">
         {/* I want to set the sizes dynamically with srcset ( I forgot the syntax ) */}
         <span className="c-card__image-wrapper">
-          <img src={`./assets/${house.image}.png`} alt="a house" />
+          {/* TOFIX: use picture elm */}
+          {/* <img src={`./assets/${house.image}.png`} alt="a house" /> */}
+          <picture>
+            <source
+              srcset={`./assets/${house.image}.png`}
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset={`./assets/${house.image}_md.png`}
+              media="(min-width: 768px)"
+            />
+            <img
+              src={`./assets/${house.image}_sm.png`}
+              alt="Front of a house"
+            />
+          </picture>
         </span>
         <div className="c-card__buttons">
           <span className="c-card__buttons__heart">
