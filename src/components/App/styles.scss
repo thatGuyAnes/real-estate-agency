@@ -1,7 +1,6 @@
 @import '../../styles/size_mixins.scss';
 
 .c-app {
-  overflow: hidden;
   padding: 52px 53px;
   @include md {
     padding: 36px 36px;
@@ -9,4 +8,5 @@
   @include sm {
     padding: 20px 20px;
   }
+  // position: relative;
 }

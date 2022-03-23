@@ -91,9 +91,11 @@
 .c-hamburger {
   display: none;
   // displays on mobile
-  .c-hamburger__close {
-    // visibility: hidden;
+  .c-hamburger__close-wrapper {
     display: none;
+  }
+  .c-hamburger__close {
+    // display: none;
     width: 20px;
     height: 20px;
     position: relative;
@@ -112,6 +114,15 @@
       transform: rotateZ(-45deg) translate(-30%, 268%);
     }
   }
+
+  .c-hamburger__line-wrapper,
+  .c-hamburger__close-wrapper {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    // border: 1px solid;
+  }
+
   .c-hamburger__line {
     display: inline-block;
     width: 20px;
@@ -146,12 +157,12 @@
 }
 
 .c-hamburger.--active {
-  .c-hamburger__line {
+  & .c-hamburger__line,
+  .c-hamburger__line-wrapper {
     display: none;
-    // visibility: hidden;
   }
-  .c-hamburger__close {
-    // visibility: visible;
+  & .c-hamburger__close,
+  .c-hamburger__close-wrapper {
     display: block;
     z-index: 10;
   }
@@ -193,6 +204,7 @@
   font-weight: 600;
   line-height: 39px;
   text-align: center;
+  color: var(--color-regular);
   &.--active {
     font-weight: 700;
     text-decoration: line-through;

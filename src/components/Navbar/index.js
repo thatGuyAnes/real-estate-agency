@@ -15,7 +15,6 @@ const Navbar = ({ isOpen, toggleMenu }) => {
     toggleMenu(false);
   };
 
-  console.log(isOpen);
   return (
     <div className="c-navbar">
       <span className="c-nav__logo"></span>
@@ -34,8 +33,12 @@ const Navbar = ({ isOpen, toggleMenu }) => {
         className={isOpen ? `c-hamburger --active` : `c-hamburger`}
         ref={hamburgerRef}
       >
-        <span className="c-hamburger__line" onClick={openMenu}></span>
-        <span className="c-hamburger__close" onClick={closeMenu}></span>
+        <span className="c-hamburger__line-wrapper" onClick={openMenu}>
+          <span className="c-hamburger__line"></span>
+        </span>
+        <span className="c-hamburger__close-wrapper" onClick={closeMenu}>
+        <span className="c-hamburger__close"></span>
+        </span>
       </div>
 
       {/* make this its own component */}

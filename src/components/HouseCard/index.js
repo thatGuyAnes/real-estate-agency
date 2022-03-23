@@ -13,11 +13,11 @@ const HouseCard = ({ house }) => {
       <span className="c-card__image-overlay"></span>
           <picture>
             <source
-              srcset={`./assets/${house.image}.png`}
+              srcSet={`./assets/${house.image}.png`}
               media="(min-width: 1024px)"
             />
             <source
-              srcset={`./assets/${house.image}_md.png`}
+              srcSet={`./assets/${house.image}_md.png`}
               media="(min-width: 768px)"
             />
             <img
