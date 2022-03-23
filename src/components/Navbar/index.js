@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { connect } from 'react-redux';
 
 import './styles.scss';
 import { toggleMenu } from '../../actions';
 
-const Navbar = ({ menuState, toggleMenu }) => {
+const Navbar = ({ isOpen, toggleMenu }) => {
 
-  const handleClick = (_e) => {
-    menuState(true)
-    console.log('ham clicked')
-  }
+  const hamburgerRef = useRef();
 
+  const openMenu = (_e) => {
+    toggleMenu(true)
+  };
+
+  const closeMenu = (_e) => {
+    toggleMenu(false)
+  };
+
+    console.log(isOpen)
   return (
     <div className="c-navbar">
 
@@ -27,17 +33,17 @@ const Navbar = ({ menuState, toggleMenu }) => {
 
       {/* click events will call the action creator */}
       <div
-        className="c-nav__hamburger"
-        onClick={handleClick}
+        className={isOpen ? `c-hamburger --active` : `c-hamburger`}
+        ref={hamburgerRef}
       >
-
-        <span className="c-nav__hamburger__line"></span>
+        <span className="c-hamburger__line" onClick={openMenu}></span>
+        <span className="c-hamburger__close" onClick={closeMenu}></span>
       </div>
 
       {/* make this its own component */}
       {/* toggle class of open/closed  */}
       <span
-        className={ menuState ? `c-nav__menu` : `c-nav__menu --open` }
+        className={ isOpen ? `c-nav__menu --open` : `c-nav__menu` }
       >
         <li className="c-menu__item">About Us</li>
         <li className="c-menu__item">Projects</li>
@@ -52,7 +58,7 @@ const Navbar = ({ menuState, toggleMenu }) => {
 
 // pass menu state to navbar's menu
 const mapStateToProps = (state) => {
-  return { menuState: state.menuState };
+  return { isOpen: state.isOpen };
 };
 
 export default connect(mapStateToProps, { toggleMenu: toggleMenu })(Navbar);

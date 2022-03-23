@@ -1,6 +1,6 @@
-export const toggleMenu = ( stateOfMenu ) => {
+export const toggleMenu = ( isOpen ) => {
   return {
     type: "TOGGLE_MENU",
-    payload: stateOfMenu
+    payload: isOpen
   }
 };
