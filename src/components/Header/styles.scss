@@ -92,6 +92,7 @@
   font-size: 24px;
   color: var(--color-bold);
   background-color: transparent;
+  cursor: pointer;
   @include md {
     margin-top: 36px;
     width: 261px;
