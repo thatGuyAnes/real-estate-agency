@@ -1,5 +1,7 @@
 # Refactored version
 
+Netlify Host: [live-demo](https://aleia-real-eastate.netlify.app/)
+
 ## Install
 
 In the project directory, you can run:
