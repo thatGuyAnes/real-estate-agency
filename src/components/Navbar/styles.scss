@@ -157,6 +157,7 @@
   }
 }
 
+// Menu ---------------------------------------//
 .c-nav__menu {
   display: none;
   &.--open {
@@ -189,7 +190,26 @@
 
 .c-menu__item {
   font-size: 28px;
+  font-weight: 600;
   line-height: 39px;
+  text-align: center;
+  &.--active {
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+  &--langs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    #eng {
+      font-weight: 400;
+      font-size: 22px;
+    }
+    #fr {
+      font-weight: 300;
+      font-size: 20px;
+    }
+  }
 }
 
 .c-menu__langs {

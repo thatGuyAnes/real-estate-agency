@@ -41,14 +41,18 @@ const Navbar = ({ isOpen, toggleMenu }) => {
       {/* make this its own component */}
       {/* toggle class of open/closed  */}
       <div className={isOpen ? `c-nav__menu --open` : `c-nav__menu`}>
-          <ul className="c-menu__list">
-            <li className="c-menu__item">About Us</li>
-            <li className="c-menu__item">Projects</li>
-            <li className="c-menu__item">Career</li>
-            <li className="c-menu__item">Contacts</li>
-          </ul>
-          {/* probably a the language as a global state */}
-          <span className="c-menu__langs"></span>
+        <ul className="c-menu__list">
+          <li className="c-menu__item --active">About Us</li>
+          <li className="c-menu__item">Projects</li>
+          <li className="c-menu__item">Career</li>
+          <li className="c-menu__item">Contacts</li>
+          {/* TOFIX: language as a global state */}
+          <li className="c-menu__item--langs">
+            <span id="eng">En</span>
+            <span>|</span>
+            <span id="fr">Fr</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
